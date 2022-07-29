@@ -72,7 +72,7 @@ nav{
     background-color: transparent;
     border: 1.5px solid #0c1825;
     border-radius: 10px;
-    padding: 16px 25px;
+    padding: 10px 20px;
     margin-left: 2vw;
     font-size: 16px;
     cursor: pointer;
@@ -89,7 +89,7 @@ nav{
     background-color: #0c1825;
     border: 1.5px solid #0c1825;
     border-radius: 10px;
-    padding:16px 25px;
+    padding:10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -111,6 +111,25 @@ nav{
 .hamburger{
     display: none;
 }
+.cart-icon{
+    position: absolute;
+    top:20%;
+    right: 3%;
+    cursor: pointer;
+    animation-name: movingcart;
+    animation-duration: 2s;
+}
+
+@keyframes movingcart {
+    0% {right: -100%;}
+    25%{right:4%}
+    50%{right:3%}
+    
+}
+
+.cart-icon:hover{
+   right: 2.7%;
+}
 
 /*Stying for small screens*/
 @media screen and (max-width: 800px){
@@ -122,11 +141,20 @@ nav{
         height: 2.2rem;
         width: 100vw;
     }
-    .hamburger{
+    .cart-icon{
+        position: absolute;
+        top:20%;
+        right: 5%;
+        cursor: pointer;
+    }
+    .cart-icon:hover{
+        right: 4.7%;
+     }
+    .hamburger {
         display:block;
         position: absolute;
         cursor: pointer;
-        right: 5%;
+        right: 15%;
         top: 50%;
         transform: translate(-5%, -50%);
         z-index: 2;
@@ -190,6 +218,15 @@ nav{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
+
+
+.cart-img_icon {
+    width: 49px;
+    height: 49px;
+}
+
+
+
 .cart {
     position: fixed;
     width: 360px;
@@ -208,12 +245,19 @@ nav{
 
 .close-cart {
     position: absolute;
-    top:010px;
+    top:020px;
     right: 10px;
     cursor: pointer;
 }
-.close-cart:hover {
-    color: red;
+
+.close-icon{
+    width:20px;
+}
+
+
+.close-icon:hover{
+    cursor: pointer;
+    width: 23px;
 }
 
 .cart-title{
