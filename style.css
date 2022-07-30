@@ -276,10 +276,11 @@ nav{
 }
 
 .detail-box {
-    position: absolute;
+    
     right: 40%;
     bottom: 0;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap:1rem;
 }
 .cart-remove {
