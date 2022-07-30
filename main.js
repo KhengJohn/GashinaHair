@@ -81,10 +81,10 @@ function addToCartClick(event) {
 
 function addItemToCart(title, price, imageSrc){
     const cartBox = document.createElement('div')
-    cartBox.classList.add('cart-box')
+    // cartBox.classList.add('cart-box')
     cartBox.classList.add('detail-box')
-    cartBox.classList.add('cart-product-title')
-    cartBox.classList.add('cart-quantity')
+    // cartBox.classList.add('cart-product-title')
+    // cartBox.classList.add('cart-quantity')
     
     
     const cartItems = document.getElementsByClassName('cart-content')[0]
