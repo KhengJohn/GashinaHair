@@ -53,8 +53,19 @@ for (let i = 0; i < addToCartButton.length; i++) {
     var button = addToCartButton[i]
     button.addEventListener("click", addToCartClick )
 } 
+document.getElementsByClassName('btn-buy')[0].addEventListener('click', purchaseClicked)
 }
  
+function purchaseClicked() {
+    alert('Thank You For Your Purchase')
+    const cartItems = document.getElementsByClassName('cart-content')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
+}
+
+
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.remove();
@@ -76,6 +87,7 @@ function addToCartClick(event) {
      const imageSrc = shopItem.getElementsByClassName('scroll-img')[0].src
      console.log(title, price, imageSrc)
      addItemToCart (title, price, imageSrc)
+     updateCartTotal()
 
 }
 
@@ -87,15 +99,15 @@ function addItemToCart(title, price, imageSrc){
     // cartBox.classList.add('cart-quantity')
     
     
-    const cartItems = document.getElementsByClassName('cart-content')[0]
-    //  const cartItemNames = cartItems.getElementsByClassName('item-title')
-    //  for (let i = 0; i < cartItemNames.length; i++) {
-    //     if (cartItemNames[i].innerText == title) {
-    //         alert('This Item Already Added To Your Cart')
-    //         return
-    //     }
-    //  }
-    const cartBoxContent = `
+     const cartItems = document.getElementsByClassName('cart-content')[0]
+     const cartItemNames = cartItems.getElementsByClassName('cart-product-title')
+         for (let i = 0; i < cartItemNames.length; i++) {
+         if (cartItemNames[i].innerText == title) {
+             alert('This Item Already Added To Your Cart')
+             return
+                }
+             }
+    var cartBoxContent = `
    <div class="cart-box">
    <img src="${imageSrc}" alt="" class="cart-img">
    <div class="detail-box">
@@ -107,6 +119,8 @@ function addItemToCart(title, price, imageSrc){
    </div> `
    cartBox.innerHTML = cartBoxContent
     cartItems.append(cartBox)
+    cartBox.getElementsByClassName('cart-remove')[0].addEventListener('click', removeCartItem)
+    cartBox.getElementsByClassName('cart-quantity')[0].addEventListener('change', quantityChanged) 
 
 }
 
@@ -124,7 +138,7 @@ for (let i = 0; i < cartBox.length; i++) {
     total = total + (price * quantity)
 }
 total = Math.round(total * 100) / 100
-document.getElementsByClassName('total-price')[0].innerText = total
+document.getElementsByClassName('total-price')[0].innerText = '$' + total
 }
 
 //   // To Update Price

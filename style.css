@@ -240,6 +240,11 @@ nav{
     transition: 0.3s;
     background-color: white;
 }
+@media (min-width:700px) {
+    .cart {
+        width: 50%;
+    }
+}
 
 .cart.active {
     right:0;
@@ -264,6 +269,7 @@ nav{
 
 .cart-title{
     text-align: center;
+   
 }
 
 .cart-box {
@@ -287,14 +293,18 @@ nav{
   position: relative;
 }
 .cart-remove {
-
+font-size: x-large;
+color: red;
+font-weight: 800;
+cursor:pointer;
 }
 .cart-product-title {
    width: 60%; 
    bottom: 02%;
    position: absolute;
    text-align: left;
-   padding-left: 10px;
+   padding-left: 05px;
+   font-weight: 700;
 }
 .cart-price {
    align-self:flex-end;
@@ -302,9 +312,9 @@ nav{
    margin-bottom: 6px;
 }
 .cart-quantity{
-    height: 20px;
-    width: 35px;
-    font-size: 1.3rem;
+    height: 30px;
+    width: 40px;
+    font-size: 1.1rem;
     outline: none;
     border: none;
     background-color:#0c1825;
@@ -316,6 +326,8 @@ nav{
     display: flex;
     float: right;
    grid-gap: 1rem;
+   font-weight: 600;
+   font-size: 1.2rem;
    
 }
 
@@ -758,18 +770,12 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,111,1) 35%, rgb
     margin-bottom: 0;
  }
 
- /* .serviceContent > ul {
-   margin: 0 !important;
-   padding: 0;
- } */
  .serviceContent  ul > li {
     list-style-type:none;
     margin-top: 10%;
     margin-left: 0;
  }
- .serviceContent  ul > li::marker{
-
- }
+ 
  
 .discountContent-left > h1, 
 .serviceContent-left > h1  {
@@ -781,6 +787,30 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,111,1) 35%, rgb
 .serviceContent {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
+}
+@media (max-width:900px){
+    .service {
+        height: 100%;
+        width: 100% !important;
+        
+    }
+    .serviceContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+
+    .serviceContent-left {
+        padding-top: 2rem;
+    }
+    .serviceBox{ 
+        padding: 10px 20px;
+        width: 200px!important;
+        height: 100px;
+        margin: .5rem;
+        background-color: #0c1825;
+        border-radius: 10px;
+    }
 }
 
 
@@ -800,7 +830,12 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,111,1) 35%, rgb
         padding-top: 2rem;
     }
     .serviceBox{ 
-       
+        padding: 10px 20px;
+        width: 300px !important;
+        height: 100px;
+        margin: 1rem;
+        background-color: #0c1825;
+        border-radius: 10px;
     }
 }
 .serviceBox {
