@@ -1,3 +1,3 @@
 <h1> GashinaHair</h1>
 
-<h1><a href="gashinahair.netlify.app" > Click To View</a>
+<a href="gashinahair.netlify.app" > Click To View</a>
