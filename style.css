@@ -206,6 +206,19 @@ nav{
         opacity: 1;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.top-scroll {
+    position: fixed;
+    z-index: 2;
+    right:40px;
+    bottom: 20%;
+    font-size: 30px;
+}
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);

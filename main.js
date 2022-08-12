@@ -80,6 +80,7 @@ function quantityChanged(event) {
     updateCartTotal()
 }
 function addToCartClick(event) {
+    alert('Added to your cart')
     const button = event.target
     const shopItem = button.parentElement.parentElement.parentElement
      const title = shopItem.getElementsByClassName('item-title')[0].innerText
